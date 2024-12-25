@@ -98,6 +98,14 @@ nav{
     transform: translateX(-50%);
     left: 50%;
 }
+#PrizeWon{
+    position: absolute;
+    color: white;
+    top: 30%;
+    transform: translateX(-50%);
+    left: 50%;
+
+}
 .question{
     position: absolute;
     top:40%;
@@ -131,16 +139,12 @@ nav{
     border-left: 5px solid white;
     color: white;
     padding: 20px; 
-    box-sizing: border-box; 
     @media(max-width:900px){
         top: 130%;
         width: 100%;
         text-align: center;
         border: 5px white solid;
-        
-
         }
-
 }
 .HintContainer{
     position: absolute;

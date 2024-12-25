@@ -106,6 +106,14 @@ a:hover {
   left: 50%;
 }
 
+#PrizeWon {
+  position: absolute;
+  color: white;
+  top: 30%;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
 .question {
   position: absolute;
   top: 40%;
@@ -141,7 +149,6 @@ a:hover {
   border-left: 5px solid white;
   color: white;
   padding: 20px;
-  box-sizing: border-box;
 }
 @media (max-width: 900px) {
   .PrizeContainer {

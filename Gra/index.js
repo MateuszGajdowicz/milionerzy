@@ -5,6 +5,7 @@ let PrizeTags = document.getElementsByClassName('prize');
 let Prize=0;
 let randomQuestion;
 let Result = document.getElementById('result');
+let Prizewon = document.getElementById("PrizeWon");
 //Pytania
 const questions = [
     {
@@ -136,16 +137,26 @@ function CheckAnswer(event) {
  
     if(clickedAnswer===correctAnswerText){
         Prize++;
-        console.log(PrizeTags[11-Prize]);
         PrizeTags[11-Prize].style.backgroundColor='yellow';
         PrizeTags[12-Prize].style.backgroundColor='hsl(236, 84%, 64%)';
         getRandomQuestion();
         WriteTexts();
-        Result.textContent="Poprawna odpowiedź";
+        Result.textContent="Poprawna odpowiedź!";
+        if(Prize>11){
+            Result.textContent="Wygrałeś 1 000 000 zł!";
+        }
+        console.log(Prize);
     }
     else{
         getRandomQuestion();
         WriteTexts();
+        Result.textContent="Błędna odpowiedź";
+        if(Prize>=2 && Prize<7){
+            Prizewon.textContent="Wygrales 1000 zł!";
+        }
+        else if(Prize>=7){
+            Prizewon.textContent="Wygrałeś 40 000 zł!";
+        }
         Prize=0;
         console.log(Prize);
         for(let i =0; i<PrizeTags.length; i++){
