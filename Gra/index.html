@@ -52,17 +52,19 @@
             <h1 class="prize">3. 2 000zł</h1>
             <h1 id="k" class="prize">2. 1 000 zł</h1>
             <h1 class="prize">1. 500 zł</h1>
+            <h1 class='prize'>0. 0 zł</h1>
 
 
         </div>
     </aside>
     <hints>
         <div class="HintContainer">
-            <button id ="fifty-fifty" class="hint">50:50</button>
-            <button class="hint">Friend</button>
-            <button class="hint">Audience</button>
+            <button id ="fifty-fifty" onclick =  'FiftyFifty()' class="hint">50:50</button>
+            <button id ='FriendButton'class="hint" onclick="FriendCall()">Friend</button>
+            <button id = 'RerollButton' onclick="Reroll()" class="hint">Reroll</button>
         </div>
     </hints>
+    <div id="FriendDiv" ></div>
     
     <script src="index.js"></script>
 
