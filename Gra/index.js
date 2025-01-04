@@ -128,7 +128,7 @@ const questions = [
     {
         question: "Który kraj ma najwięcej ludności na świecie?",
         answers: ["A. Indie", "B. Chiny", "C. USA", "D. Indonezja"],
-        correctAnswer: 1
+        correctAnswer: 0
     },
     {
         question: "Jakie jest narodowe zwierzę Kanady?",
@@ -428,8 +428,6 @@ function WriteTexts(){
 
 WriteTexts();
 
-
-
 //sprawdzenie odpowiedzi
 let clickedAnswer;
 let correctAnswerText;
@@ -446,7 +444,7 @@ function CheckAnswer(event) {
         getRandomQuestion();
         WriteTexts();
         Result.textContent="Poprawna odpowiedź!";
-        if(Prize===11){
+        if(Prize===12){
             Result.textContent="Wygrałeś 1 000 000 zł!";
 
         } 
@@ -454,7 +452,8 @@ function CheckAnswer(event) {
     else{
         getRandomQuestion();
         WriteTexts();
-        Result.textContent="Błędna odpowiedź";
+        Result.textContent=`Błędna odpowiedź. Poprawna odpowiedź to ${randomQuestion.answers[randomQuestion.correctAnswer]}`;
+
         if(Prize>=1 && Prize<6){
             Prizewon.textContent="Wygrales 1000 zł!";
             Prize=0;
@@ -465,7 +464,6 @@ function CheckAnswer(event) {
             Prize=0;
 
         }
-        console.log(Prize);
         for(let i =0; i<PrizeTags.length; i++){
             PrizeTags[i].style.backgroundColor='hsl(236, 84%, 64%)'
         }
